@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+
+}
+
+
+
+.container {
+
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+
+}
+
+
+
+.header {
+
+    background: #2563eb;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+
+}
+
+
+
+.header h1 {
+
+    margin: 0;
+    font-size: 32px;
+
+}
+
+
+
+.header p {
+
+    margin-top: 8px;
+    opacity: 0.9;
+
+}
+
+
+
+
+
+.search-box input,
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+
+}
+
+
+.search-box input:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #2563eb;
+
+}
+
+
+.toolbar {
+
+    margin: 20px 0;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.sort-select {
+
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+    background: white;
+
+}
+
+
+
+
+
+button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+
+}
+
+
+
+button:disabled {
+
+    background: #94a3b8;
+
+    cursor: not-allowed;
+
+}
+
+
+.error-text {
+
+    display: block;
+    margin-top: 8px;
+    color: #dc2626;
+    font-size: 14px;
+
+}
+
+
+.success-text {
+
+    margin-top: 12px;
+    color: #15803d;
+    font-weight: 600;
+
+}
+
+
+.empty-state {
+
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+
+}
+
+
+.empty-state h3 {
+
+    margin-top: 0;
+    color: #1e293b;
+
+}
+
+
+.success-banner {
+
+    margin: 15px 0;
+    padding: 12px 14px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 10px;
+    font-weight: 600;
+
+}
+
+
+.validator-card {
+
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.validator-card h2 {
+
+    margin-top: 0;
+    color: #1e293b;
+
+}
+
+
+.task-form-modal {
+
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 20;
+
+}
+
+
+.task-form {
+
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+
+}
+
+
+.task-form-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+
+}
+
+
+.task-form-header h2 {
+
+    margin: 0;
+    color: #1e293b;
+
+}
+
+
+.close-btn {
+
+    background: transparent;
+    color: #475569;
+    font-size: 26px;
+    padding: 0;
+    line-height: 1;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 15px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+
+}
+
+
+.form-actions {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+
+.secondary {
+
+    background: #64748b;
+
+}
+
+
+.card {
+
+
+    background:white;
+
+    padding:20px;
+
+    margin:15px 0;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+.card:hover {
+
+
+    transform: translateY(-5px);
+
+
+}
+
+
+
+.card h3 {
+
+
+    margin-top:0;
+
+    color:#2563eb;
+
+
+}
+
+
+
+.card p {
+
+    color:#475569;
+
+    line-height:1.5;
+
+}
+
+
+
+
+.status {
+
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+.actions {
+
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+
+
+.edit {
+
+
+    background:#16a34a;
+
+}
+
+
+
+.delete {
+
+
+    background:#dc2626;
+
+}
+
+
+
+
+.pagination {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 95%;
+        padding: 15px;
+
+    }
+
+    .actions,
+    .form-actions {
+
+        flex-direction: column;
+
+    }
+
+    button {
+
+        width: 100%;
+
+    }
+
+}
