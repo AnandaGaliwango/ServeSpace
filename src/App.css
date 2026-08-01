@@ -394,6 +394,15 @@ button:disabled {
 
 
 
+.details {
+
+
+    background:#0f766e;
+
+}
+
+
+
 .edit {
 
 
@@ -410,6 +419,91 @@ button:disabled {
 
 }
 
+
+
+
+.task-details-card {
+
+    max-width: 520px;
+
+}
+
+
+
+.task-details-content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 18px;
+
+}
+
+
+
+.task-details-title-block,
+.task-details-meta,
+.task-details-desc {
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+
+}
+
+
+
+.detail-label {
+
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    font-weight: 700;
+
+}
+
+
+
+.task-details-content h3 {
+
+    margin: 0;
+    color: #1e293b;
+
+}
+
+
+
+.task-details-meta strong {
+
+    color: #0f172a;
+    font-size: 16px;
+
+}
+
+
+
+.task-details-content p {
+
+    margin: 0;
+    white-space: pre-wrap;
+    color: #475569;
+    line-height: 1.6;
+
+}
+
+
+
+.task-details-actions {
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+}
 
 
 

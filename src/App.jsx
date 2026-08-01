@@ -35,6 +35,7 @@ function App() {
     const [search, setSearch] = useState("");
     const [sortBy, setSortBy] = useState("newest");
     const [showForm, setShowForm] = useState(false);
+    const [selectedTask, setSelectedTask] = useState(null);
     const [formMode, setFormMode] = useState("add");
     const [editingTaskId, setEditingTaskId] = useState(null);
     const [taskErrors, setTaskErrors] = useState({});
@@ -158,6 +159,20 @@ function App() {
         setEditingTaskId(null);
         setTaskErrors({});
         setTaskForm({ title: "", body: "" });
+
+    }
+
+
+    function openTaskDetails(task) {
+
+        setSelectedTask(task);
+
+    }
+
+
+    function closeTaskDetails() {
+
+        setSelectedTask(null);
 
     }
 
@@ -475,6 +490,53 @@ function App() {
             }
 
 
+            {
+                selectedTask && (
+                    <div className="task-form-modal">
+                        <div className="task-form task-details-card">
+
+                            <div className="task-form-header">
+                                <h2>Task Details</h2>
+                                <button type="button" className="close-btn" onClick={closeTaskDetails}>
+                                    ×
+                                </button>
+                            </div>
+
+                            <div className="task-details-content">
+                                <div className="task-details-title-block">
+                                    <span className="detail-label">Task Title</span>
+                                    <h3>{selectedTask.title}</h3>
+                                </div>
+
+                                <div className="task-details-meta">
+                                    <span className="detail-label">Task ID</span>
+                                    <strong>#{selectedTask.id}</strong>
+                                </div>
+
+                                <div className="task-details-desc">
+                                    <span className="detail-label">Description</span>
+                                    <p>{selectedTask.body}</p>
+                                </div>
+                            </div>
+
+                            <div className="task-details-actions">
+                                <button type="button" onClick={() => {
+                                    closeTaskDetails();
+                                    openEditTaskForm(selectedTask);
+                                }}>
+                                    Edit Task
+                                </button>
+                                <button type="button" className="secondary" onClick={closeTaskDetails}>
+                                    Close
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                )
+            }
+
+
             <div className="validator-card">
                 <h2>Dynamic Form Validator Demo</h2>
                 <p>Use the configuration object and field rules to validate email, password, and phone number instantly.</p>
@@ -562,6 +624,10 @@ function App() {
                             <p>{task.body}</p>
 
                             <div className="actions">
+                                <button className="details" onClick={() => openTaskDetails(task)}>
+                                    View Details
+                                </button>
+
                                 <button className="edit" onClick={() => openEditTaskForm(task)}>
                                     Edit Task
                                 </button>
